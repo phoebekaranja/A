@@ -16,4 +16,13 @@ class Profile(models.Model):
     photo = models.ImageField(upload_to = 'profile/')
     profile = models.ForeignKey(User, null=True)
     bio = models.TextField(max_length = 100)
-    contact = models.IntegerField(null=True)    
+    contact = models.IntegerField(null=True)
+    def save_profile(self):
+        self.save()
+
+    def delete_profile(self):
+        self.delete()
+
+
+class Comment(models.Model):
+    comment = models.CharField(max_length = 400)            
