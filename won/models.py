@@ -35,6 +35,9 @@ class Project(models.Model):
         projects_title = cls.objects.filter(title__icontains=search_term)
         return projects_title
 
+    def __str__(self):
+        return f'{self.title}'
+
 class Profile(models.Model):
     photo = models.ImageField(upload_to = 'profile/')
     profile = models.ForeignKey(User, null=True)
