@@ -18,7 +18,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
-      <a  class="navbar-brand" data-toggle="modal" data-target="#settings" aria-hidden="true"style="color:black;" ><i class="fa fa-bars" style="color:black;"></i> Menu</a>
+      <a  class="navbar-brand" data-toggle="modal" data-target="#settings" aria-hidden="true"style="color:black;" ><i class="fa fa-bars" style="colorblue;"></i> Menu</a>
       <form class="navbar-form" role="search" action="{% url 'search_results' %}">
 
         <div class="input-group">
@@ -31,19 +31,19 @@
       </form>
     </div>
     <div class="col-md-4">
-      <a class="navbar-brand" href="{% url 'indexPage' %}" style="color:black;"> <b>Awwards</b></a>
+      <a class="navbar-brand" href="{% url 'indexPage' %}" style="color:purple;"> <b>Awwards</b></a>
     </div>
     <div class="col-md-4" class="navbar navbar-right">
       {% if user.is_authenticated %}
 
-      <h6><a  class="navbar-brand" href="/accounts/register/" style="color:black;"> Register</a>
+      <h6><a  class="navbar-brand" href="/accounts/register/" style="color:purple;"> Register</a>
       <a class="navbar-brand" href="/logout/"style="color:black;">Log Out</a>
-      <a  class="navbar-brand" href="{% url 'ProjectForm' %}" style="color:black;">Add Project</a>
-      <a  class="navbar-brand" href="{% url 'Profile' %}" style="color:black;">profile</a></h6>
+      <a  class="navbar-brand" href="{% url 'ProjectForm' %}" style="color:purple;">Add Project</a>
+      <a  class="navbar-brand" href="{% url 'Profile' %}" style="color:purple;">profile</a></h6>
 
       {% else %}
       <li>
-        <a class="navbar-brand" href="/accounts/login" style="color:black;">Login</a>
+        <a class="navbar-brand" href="/accounts/login" style="color:purple;">Login</a>
       </li>
 
       {% endif %}
